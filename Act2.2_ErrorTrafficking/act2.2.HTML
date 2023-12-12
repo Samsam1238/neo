@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/custom.css" />
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="box">
+        <div class="container">
+            <form class="needs-validation" novalidate>
+                <div class="row g-4">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-white">Secret Santa Gift Exchange Form</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="form-label text-white">Full name</label>
+                        <input type="text" class="form-control" id="name" required placeholder="Name" onkeydown="return /[a-z]/i.test(event.key)"  />
+                        <div class="invalid-feedback">Plss Provide a Valid Name</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label text-white">Email</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text" id="email">@</span>
+                            <input type="text" class="form-control" id="Email"  aria-describedby="inputGroupPrepend"
+                                required>
+                            <div class="invalid-feedback">
+                                Please Provide a Valid Email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="gender" class="form-label text-white">Gift Preferences</label>
+                        <input list="Preferencess" class="form-control" id="Preferences" required>
+                        <datalist id="Preferencess" required>
+                            <option selected disabled value="">Preferences</option>
+                            <option value="Book">Book</option>
+                            <option value="Tech Gadgets">Tech Gadgets</option>
+                            <option value="Home Decor"></option>
+                            <option value="Clothing/Apparel">Clothing/Apparel</option>
+                        </datalist>
+                        <div class="invalid-feedback">Please select your Preferences.</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="Budget" class="form-label text-white">Budget Range</label>
+                        <input type="number" class="form-control" id="Budget" required />
+                        <div class="invalid-feedback">
+                            Please provide a valid Age.
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="gender" class="form-label text-white">Preferred Color:</label>
+                        <select class="form-select" id="color" required>
+                            <option selected disabled value="">color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a valid color.</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="date" class="form-label text-white">When?</label>
+                        <input type="datetime-local" class="form-control" id="datet" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid Date.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Preferred Gift Wrapping Style</label>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="choice1" value="Classic"
+                                        name="radio-stacked2" required>
+                                    <label class="form-check-label text-white" for="choice1">Classic</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="choice2" value="Festive"
+                                        name="radio-stacked2" required>
+                                    <label class="form-check-label text-white" for="choice2">Festive</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="choice3" value="Mix and Match"
+                                        name="radio-stacked2" required>
+                                    <label class="form-check-label text-white" for="choice3">Mix and Match</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="choice4" value="Minimalist"
+                                        name="radio-stacked2" required>
+                                    <label class="form-check-label text-white" for="choice4">Minimalist</label>
+                                    <div class="invalid-feedback">Please select one</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="name" class="form-label text-white">Complete Address</label>
+                        <input type="text" class="form-control" id="Address" required placeholder="Address" />
+                        <div class="invalid-feedback">Plss Provide a Address</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="agreeTerms" required>
+                            <label class="form-check-label text-white" for="agreeTerms">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mx-auto ">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-sm border-dark " id="dataTable">
+                        <thead>
+                            <tr>
+                              <th >Full Name</th>
+                              <th >Email</th>
+                              <th>Gift Preference</th>
+                              <th>budget Range</th>
+                              <th>Preferred Color</th>
+                              <th>When?</th>
+                              <th>Preferred Gift Wrapping Style</th>
+                              <th>Complete Address</th>
+                              <th>terms and conditions</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="errortraffic.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
